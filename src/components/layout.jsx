@@ -1,12 +1,11 @@
 import React from "react";
-import Navbar from "./navbar";
+import MiniDrawer from "./drawer";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <MiniDrawer main={<Outlet />} />
     </>
   );
 };

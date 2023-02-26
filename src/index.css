@@ -1,13 +1,46 @@
-body {
+@font-face {
+  font-family: badr;
+  src: url(/public/fonts/badr.ttf);
+}
+@font-face {
+  font-family: iranSerif;
+  src: url(/public/fonts/irseri.ttf);
+}
+
+html,body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: badr;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: badr,source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.homePageImage {
+  height: 30em;
+  width: 25em;
+  margin-top: 4em;
+  animation: anim-home-image 750ms infinite linear;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+@media (max-width: 640px) {
+  .homePageImage {
+    height: 22em;
+    width: 17em;
+  }
+}
+
+@keyframes anim-home-image {
+  0% {
+    opacity: .85;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
